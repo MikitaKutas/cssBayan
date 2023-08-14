@@ -8,25 +8,20 @@
 }
 
 .container {
-  width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 50vw;
   border-bottom: 2px black solid;
   padding: 10px;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, background-color 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  max-height: 50px;
-}
-.container h1 {
-  font-size: 2.5em;
+  max-height: 3vw;
 }
 .container span {
-  font-size: 1.5em;
+  font-size: 1.5vw;
   margin: 0;
 }
 .container img {
-  width: 498px;
+  width: 35vw;
   display: block;
   margin: 20px auto 10px auto;
   opacity: 0;
@@ -40,14 +35,34 @@
 .container .close {
   display: none;
 }
+.container .text {
+  color: rgb(51, 51, 226);
+}
 
-.header {
+.mainContent {
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
   max-height: 500px;
+  width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 2px black solid;
+  padding: 10px;
+}
+header h1 {
+  font-size: 2.5vw;
 }
 
 @media (hover: hover) {
   .container .expand {
     display: none;
+  }
+  .mainContent:hover .text {
+    color: black;
   }
   .mainContent:hover .expand {
     display: inline-block;
@@ -64,5 +79,114 @@
   }
   .container:hover .close {
     display: inline-block;
+  }
+}
+.container:active .text, .container:active .close {
+  color: rgb(51, 51, 226);
+}
+.container:active .meme {
+  opacity: 0.5;
+}
+
+.container:focus {
+  max-height: 1000px;
+  outline: none;
+}
+.container:focus img {
+  opacity: 1;
+}
+.container:focus .expand {
+  display: none;
+}
+.container:focus .close {
+  display: inline-block;
+}
+.container:focus .text, .container:focus .close {
+  color: black;
+}
+
+@media (max-width: 1400px) {
+  header, .container, .mainContent {
+    width: 60vw;
+  }
+  header h1, .container h1, .mainContent h1 {
+    font-size: 3vw;
+  }
+  header span, .container span, .mainContent span {
+    font-size: 2vw;
+  }
+  .container {
+    max-height: 4vw;
+  }
+  .container .meme {
+    width: 45vw;
+  }
+}
+@media (max-width: 1000px) {
+  header, .container, .mainContent {
+    width: 70vw;
+  }
+  header h1, .container h1, .mainContent h1 {
+    font-size: 3.5vw;
+  }
+  header span, .container span, .mainContent span {
+    font-size: 2.5vw;
+  }
+  .container {
+    max-height: 5vw;
+  }
+  .container .meme {
+    width: 50vw;
+  }
+}
+@media (max-width: 800px) {
+  header, .container, .mainContent {
+    width: 80vw;
+  }
+  header h1, .container h1, .mainContent h1 {
+    font-size: 4vw;
+  }
+  header span, .container span, .mainContent span {
+    font-size: 3vw;
+  }
+  .container {
+    max-height: 6vw;
+  }
+  .container .meme {
+    width: 55vw;
+  }
+}
+@media (max-width: 600px) {
+  header, .container, .mainContent {
+    width: 95vw;
+  }
+  header h1, .container h1, .mainContent h1 {
+    font-size: 6vw;
+  }
+  header span, .container span, .mainContent span {
+    font-size: 5vw;
+  }
+  .container {
+    max-height: 9vw;
+  }
+  .container .meme {
+    width: 70vw;
+  }
+}
+@media (max-width: 400px) {
+  header, .container, .mainContent {
+    width: 95vw;
+  }
+  header h1, .container h1, .mainContent h1 {
+    font-size: 8vw;
+  }
+  header span, .container span, .mainContent span {
+    font-size: 6vw;
+  }
+  .container {
+    max-height: 11vw;
+  }
+  .container .meme {
+    width: 80vw;
   }
 }

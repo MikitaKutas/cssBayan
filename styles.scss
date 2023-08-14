@@ -12,15 +12,12 @@
 }
 
 .container{
-	h1 {
-		font-size: 2.5em;
-	}
 	span {
-		font-size: 1.5em;
+		font-size: 1.5vw;
 		margin: 0;
 	}
 	img {
-		width: 498px;
+		width: 35vw;
 		display: block;
 		margin: 20px auto 10px auto;
   	opacity: 0;
@@ -34,19 +31,34 @@
 	.close {
 		display: none;
 	}
-	width: 1000px;
-	margin-right: auto;
-	margin-left: auto;
+	.text {
+		color: rgb(51, 51, 226);
+		}
+	width: 50vw;
 	border-bottom: 2px black solid;
 	padding: 10px;
-	transition: max-height 0.3s ease-in-out;
+	transition: max-height 0.3s ease-in-out, background-color 0.3s ease-in-out;
 	position: relative;
 	overflow: hidden;
-	max-height: 50px;
+	max-height: 3vw;
 }
 
-.header {
+.mainContent {
+	width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+	h1 {
+		font-size: 2.5vw;
+	}
 	max-height: 500px;
+	width: 50vw;
+  margin-right: auto;
+  margin-left: auto;
+	border-bottom: 2px black solid;
+	padding: 10px;
 }
 
 @media (hover : hover) {
@@ -57,6 +69,9 @@
 	}
 
 	.mainContent:hover {
+			.text {
+				color: black;
+		}
 		.expand {
 			display: inline-block;
 		}
@@ -76,5 +91,122 @@
 	
 	max-height:1000px;
 	cursor: pointer;
+	}
+}
+
+.container:active {
+	.text, .close {
+  color: rgb(51, 51, 226);
+	}
+	.meme {
+		opacity: 0.5;
+	}
+}
+
+.container:focus {
+		max-height:1000px;
+		outline: none;
+		img {
+			opacity: 1;
+	}
+	.expand {
+		display: none;
+	}
+
+	.close{
+		display: inline-block;
+	}
+	.text, .close {
+		color: black;
+		}
+}
+
+@media (max-width: 1400px) {
+	header, .container, .mainContent {
+		width: 60vw;
+		h1{
+			font-size: 3vw;
+		}
+		span{
+			font-size: 2vw;
+		}
+	}
+	.container{
+		.meme {
+			width: 45vw;
+		}
+		max-height: 4vw;
+	}
+}
+
+@media (max-width: 1000px) {
+	header, .container, .mainContent {
+		width: 70vw;
+		h1{
+			font-size: 3.5vw;
+		}
+		span{
+			font-size: 2.5vw;
+		}
+	}
+	.container{
+		.meme {
+			width: 50vw;
+		}
+		max-height: 5vw;
+	}
+}
+
+@media (max-width: 800px) {
+	header, .container, .mainContent {
+		width: 80vw;
+		h1{
+			font-size: 4vw;
+		}
+		span{
+			font-size: 3vw;
+		}
+	}
+	.container{
+		.meme {
+			width: 55vw;
+		}
+		max-height: 6vw;
+	}
+}
+
+@media (max-width: 600px) {
+	header, .container, .mainContent {
+		width: 95vw;
+		h1{
+			font-size: 6vw;
+		}
+		span{
+			font-size: 5vw;
+		}
+	}
+	.container{
+		.meme {
+			width: 70vw;
+		}
+		max-height: 9vw;
+	}
+}
+
+@media (max-width: 400px) {
+	header, .container, .mainContent {
+		width: 95vw;
+		h1{
+			font-size: 8vw;
+		}
+		span{
+			font-size: 6vw;
+		}
+	}
+	.container{
+		.meme {
+			width: 80vw;
+		}
+		max-height: 11vw;
 	}
 }
